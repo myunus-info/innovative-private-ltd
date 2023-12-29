@@ -27,7 +27,7 @@ const retrieveStoredToken = () => {
   };
 };
 
-export const AuthContextProvider = (props) => {
+export const AuthContextProvider = props => {
   const tokenData = retrieveStoredToken();
   const [user, setUser] = useState({});
 
@@ -36,7 +36,6 @@ export const AuthContextProvider = (props) => {
 
   const [token, setToken] = useState(initialToken);
   const isUserLoggedIn = !!token;
-  console.log(isUserLoggedIn, token);
 
   const logoutHandler = useCallback(() => {
     setToken(null);
@@ -66,11 +65,7 @@ export const AuthContextProvider = (props) => {
     user,
   };
 
-  return (
-    <AuthContext.Provider value={contextValue}>
-      {props.children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={contextValue}>{props.children}</AuthContext.Provider>;
 };
 
 export default AuthContext;

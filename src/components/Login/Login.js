@@ -40,7 +40,6 @@ const Login = () => {
 
   const onSubmit = data => {
     loginUserHandler(data);
-    // console.log(data);
   };
 
   useEffect(() => {

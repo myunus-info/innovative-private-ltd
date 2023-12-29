@@ -11,9 +11,6 @@ const SearchFilterProducts = () => {
   const handleSearchTerm = searchTerm => setSearchTerm(searchTerm);
   const handlePriceChange = changedPrice => setChangedPrice(changedPrice);
 
-  console.log(searchTerm);
-  console.log(changedPrice);
-
   useEffect(() => {
     getSearchTerm(searchTerm);
   }, [getSearchTerm, searchTerm]);

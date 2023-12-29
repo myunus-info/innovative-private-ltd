@@ -20,7 +20,6 @@ const useHttp = () => {
             `The requested URL ${response.statusText}` || "Request failed!"
           );
         }
-        console.log("Error Log: ", response);
         throw new Error(response.statusText || "Request failed!");
       }
 
